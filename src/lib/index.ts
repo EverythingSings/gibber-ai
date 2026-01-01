@@ -15,3 +15,6 @@ export * from "./credentials";
 
 // Re-export AI module
 export * from "./ai";
+
+// Re-export Gibber module
+export * from "./gibber";
