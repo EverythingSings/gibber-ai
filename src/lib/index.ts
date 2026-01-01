@@ -1,0 +1,11 @@
+/**
+ * Gibber AI Library exports.
+ *
+ * This is the main entry point for all library modules.
+ * Import from `$lib` to access these exports.
+ *
+ * @module lib
+ */
+
+// Re-export types
+export * from "./types";
