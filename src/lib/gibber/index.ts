@@ -161,3 +161,86 @@ export {
   resetGibber,
   get,
 } from "./state";
+
+// Re-export graphics types
+export type {
+  // State
+  GraphicsContextState,
+  GraphicsError,
+  GraphicsErrorCode,
+  GraphicsInitOptions,
+
+  // Vectors
+  Vec2,
+  Vec3,
+  Vec4,
+
+  // Materials and textures
+  MaterialMode,
+  TexturePreset,
+  MaterialPreset,
+  MaterialOptions,
+  TextureOptions,
+
+  // Geometry types
+  SequencableGraphicsProperty,
+  TransformOperations,
+  Geometry,
+  Sphere,
+  Box,
+  Torus,
+  Capsule,
+  Cone,
+  Cylinder,
+  HexPrism,
+  Julia,
+  Mandelbulb,
+  Mandelbox,
+  Plane,
+  CSGOperation,
+  DomainModifier,
+
+  // Post effects
+  PostEffect,
+  BloomEffect,
+  BlurEffect,
+  FocusEffect,
+  GodraysEffect,
+
+  // Scene elements
+  Light,
+  Camera,
+  Fog,
+
+  // Namespace
+  GraphicsNamespace,
+} from "./graphics";
+
+// Re-export graphics functions
+export {
+  // Error utilities
+  createGraphicsError,
+  isGraphicsError,
+
+  // Context management
+  getGraphicsState,
+  getGraphicsError,
+  isGraphicsReady,
+  getGraphics,
+  getCanvas,
+  isWebGLSupported,
+  initializeGraphics,
+  clearGraphics,
+  destroyGraphics,
+  subscribeToGraphicsStateChanges,
+
+  // Convenience factory functions
+  createSphere,
+  createBox,
+  createTorus,
+  createVec3,
+  createVec2,
+  createUnion,
+  createDifference,
+  createIntersection,
+} from "./graphics";

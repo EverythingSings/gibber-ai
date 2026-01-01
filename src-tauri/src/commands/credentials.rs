@@ -153,7 +153,8 @@ mod tests {
     #[test]
     fn test_service_name_is_valid() {
         // Ensure service name doesn't contain problematic characters
-        assert!(!SERVICE_NAME.is_empty());
+        // SERVICE_NAME is a const so we validate format, not emptiness
+        assert_eq!(SERVICE_NAME, "gibber-ai");
         assert!(!SERVICE_NAME.contains(' '));
         assert!(!SERVICE_NAME.contains('\n'));
     }
