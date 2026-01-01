@@ -12,3 +12,6 @@ export * from "./types";
 
 // Re-export credentials module
 export * from "./credentials";
+
+// Re-export AI module
+export * from "./ai";
