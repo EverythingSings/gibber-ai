@@ -9,3 +9,6 @@
 
 // Re-export types
 export * from "./types";
+
+// Re-export credentials module
+export * from "./credentials";

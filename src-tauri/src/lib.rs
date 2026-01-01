@@ -3,6 +3,8 @@
 //! This module contains the Tauri application setup and command handlers
 //! for the Gibber AI desktop application.
 
+mod commands;
+
 /// Greets the user with a personalized message.
 ///
 /// This is a sample command demonstrating Tauri's IPC mechanism.
@@ -40,7 +42,13 @@ fn greet(name: &str) -> String {
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![greet])
+        .plugin(tauri_plugin_keyring::init())
+        .invoke_handler(tauri::generate_handler![
+            greet,
+            commands::credentials::get_api_key,
+            commands::credentials::set_api_key,
+            commands::credentials::delete_api_key,
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
